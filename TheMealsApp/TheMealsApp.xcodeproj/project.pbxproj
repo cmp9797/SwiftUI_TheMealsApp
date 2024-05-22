@@ -33,6 +33,7 @@
 		8F2D0E032BFE5590005A05AD /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8F2D0E022BFE5590005A05AD /* RealmSwift */; };
 		8F2D0E072BFE585F005A05AD /* CategoryEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2D0E062BFE585F005A05AD /* CategoryEntity.swift */; };
 		8F2D0E0A2BFE59FF005A05AD /* LocaleDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2D0E092BFE59FF005A05AD /* LocaleDataSource.swift */; };
+		8F2D0E0D2BFE63CF005A05AD /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = 8F2D0E0C2BFE63CF005A05AD /* CachedAsyncImage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +69,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F2D0DF62BFE4BAC005A05AD /* Alamofire in Frameworks */,
+				8F2D0E0D2BFE63CF005A05AD /* CachedAsyncImage in Frameworks */,
 				8F2D0E032BFE5590005A05AD /* RealmSwift in Frameworks */,
 				8F2D0DF82BFE4BAC005A05AD /* AlamofireDynamic in Frameworks */,
 			);
@@ -335,6 +337,7 @@
 				8F2D0DF52BFE4BAC005A05AD /* Alamofire */,
 				8F2D0DF72BFE4BAC005A05AD /* AlamofireDynamic */,
 				8F2D0E022BFE5590005A05AD /* RealmSwift */,
+				8F2D0E0C2BFE63CF005A05AD /* CachedAsyncImage */,
 			);
 			productName = TheMealsApp;
 			productReference = 2A9D452B292C805D008FABEB /* TheMealsApp.app */;
@@ -367,6 +370,7 @@
 			packageReferences = (
 				8F2D0DF42BFE4BAC005A05AD /* XCRemoteSwiftPackageReference "Alamofire" */,
 				8F2D0DFF2BFE5590005A05AD /* XCRemoteSwiftPackageReference "realm-swift" */,
+				8F2D0E0B2BFE63CF005A05AD /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */,
 			);
 			productRefGroup = 2A9D452C292C805D008FABEB /* Products */;
 			projectDirPath = "";
@@ -656,6 +660,14 @@
 				kind = branch;
 			};
 		};
+		8F2D0E0B2BFE63CF005A05AD /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/lorenzofiamingo/swiftui-cached-async-image";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.1.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -673,6 +685,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 8F2D0DFF2BFE5590005A05AD /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = RealmSwift;
+		};
+		8F2D0E0C2BFE63CF005A05AD /* CachedAsyncImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8F2D0E0B2BFE63CF005A05AD /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */;
+			productName = CachedAsyncImage;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
