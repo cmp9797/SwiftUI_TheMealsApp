@@ -6,15 +6,16 @@
 //
 
 import Foundation
+import RealmSwift
 
 final class Injection: NSObject {
 
   private func provideRepository() -> MealRepositoryProtocol {
-
-    let remote: RemoteDataSource = RemoteDataSource.sharedInstance
-
-    return MealRepository.sharedInstance(remote)
-  }
+     let realm = try? Realm()
+     let locale: LocaleDataSource = LocaleDataSource.sharedInstance(realm)
+     let remote: RemoteDataSource = RemoteDataSource.sharedInstance
+     return MealRepository.sharedInstance(locale, remote)
+   }
 
   func provideHome() -> HomeUseCase {
     let repository = provideRepository()

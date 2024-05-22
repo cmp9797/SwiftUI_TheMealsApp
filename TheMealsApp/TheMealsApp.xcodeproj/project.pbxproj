@@ -30,6 +30,9 @@
 		2A9D4572292C8620008FABEB /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9D4571292C8620008FABEB /* DetailView.swift */; };
 		8F2D0DF62BFE4BAC005A05AD /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 8F2D0DF52BFE4BAC005A05AD /* Alamofire */; };
 		8F2D0DF82BFE4BAC005A05AD /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 8F2D0DF72BFE4BAC005A05AD /* AlamofireDynamic */; };
+		8F2D0E032BFE5590005A05AD /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8F2D0E022BFE5590005A05AD /* RealmSwift */; };
+		8F2D0E072BFE585F005A05AD /* CategoryEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2D0E062BFE585F005A05AD /* CategoryEntity.swift */; };
+		8F2D0E0A2BFE59FF005A05AD /* LocaleDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2D0E092BFE59FF005A05AD /* LocaleDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +58,8 @@
 		2A9D456B292C8577008FABEB /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		2A9D456F292C8604008FABEB /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
 		2A9D4571292C8620008FABEB /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		8F2D0E062BFE585F005A05AD /* CategoryEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryEntity.swift; sourceTree = "<group>"; };
+		8F2D0E092BFE59FF005A05AD /* LocaleDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocaleDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +68,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F2D0DF62BFE4BAC005A05AD /* Alamofire in Frameworks */,
+				8F2D0E032BFE5590005A05AD /* RealmSwift in Frameworks */,
 				8F2D0DF82BFE4BAC005A05AD /* AlamofireDynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -157,6 +163,7 @@
 		2A9D4541292C8118008FABEB /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				8F2D0E052BFE584A005A05AD /* Locale */,
 				2A9D4545292C8144008FABEB /* Remote */,
 				2A9D454B292C819A008FABEB /* MealRepository.swift */,
 			);
@@ -290,6 +297,23 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
+		8F2D0E052BFE584A005A05AD /* Locale */ = {
+			isa = PBXGroup;
+			children = (
+				8F2D0E082BFE59F0005A05AD /* Entity */,
+				8F2D0E092BFE59FF005A05AD /* LocaleDataSource.swift */,
+			);
+			path = Locale;
+			sourceTree = "<group>";
+		};
+		8F2D0E082BFE59F0005A05AD /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				8F2D0E062BFE585F005A05AD /* CategoryEntity.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -310,6 +334,7 @@
 			packageProductDependencies = (
 				8F2D0DF52BFE4BAC005A05AD /* Alamofire */,
 				8F2D0DF72BFE4BAC005A05AD /* AlamofireDynamic */,
+				8F2D0E022BFE5590005A05AD /* RealmSwift */,
 			);
 			productName = TheMealsApp;
 			productReference = 2A9D452B292C805D008FABEB /* TheMealsApp.app */;
@@ -341,6 +366,7 @@
 			mainGroup = 2A9D4522292C805D008FABEB;
 			packageReferences = (
 				8F2D0DF42BFE4BAC005A05AD /* XCRemoteSwiftPackageReference "Alamofire" */,
+				8F2D0DFF2BFE5590005A05AD /* XCRemoteSwiftPackageReference "realm-swift" */,
 			);
 			productRefGroup = 2A9D452C292C805D008FABEB /* Products */;
 			projectDirPath = "";
@@ -389,6 +415,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F2D0E0A2BFE59FF005A05AD /* LocaleDataSource.swift in Sources */,
 				2A9D454A292C817B008FABEB /* RemoteDataSource.swift in Sources */,
 				2A9D4531292C805D008FABEB /* ContentView.swift in Sources */,
 				2A9D456A292C84C2008FABEB /* CategoryRow.swift in Sources */,
@@ -405,6 +432,7 @@
 				2A9D455F292C828E008FABEB /* CustomeError+Ext.swift in Sources */,
 				2A9D4551292C81DD008FABEB /* CategoryModel.swift in Sources */,
 				2A9D455D292C8272008FABEB /* CategoryMapper.swift in Sources */,
+				8F2D0E072BFE585F005A05AD /* CategoryEntity.swift in Sources */,
 				2A9D454C292C819A008FABEB /* MealRepository.swift in Sources */,
 				2A9D4572292C8620008FABEB /* DetailView.swift in Sources */,
 				2A9D4548292C8162008FABEB /* CategoriesResponse.swift in Sources */,
@@ -620,6 +648,14 @@
 				minimumVersion = 5.9.1;
 			};
 		};
+		8F2D0DFF2BFE5590005A05AD /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -632,6 +668,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 8F2D0DF42BFE4BAC005A05AD /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = AlamofireDynamic;
+		};
+		8F2D0E022BFE5590005A05AD /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8F2D0DFF2BFE5590005A05AD /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
