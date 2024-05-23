@@ -34,6 +34,8 @@
 		8F2D0E072BFE585F005A05AD /* CategoryEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2D0E062BFE585F005A05AD /* CategoryEntity.swift */; };
 		8F2D0E0A2BFE59FF005A05AD /* LocaleDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2D0E092BFE59FF005A05AD /* LocaleDataSource.swift */; };
 		8F2D0E0D2BFE63CF005A05AD /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = 8F2D0E0C2BFE63CF005A05AD /* CachedAsyncImage */; };
+		8F2D0E102BFE68F4005A05AD /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 8F2D0E0F2BFE68F4005A05AD /* RxCocoa */; };
+		8F2D0E122BFE68F4005A05AD /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 8F2D0E112BFE68F4005A05AD /* RxRelay */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,8 +70,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F2D0E122BFE68F4005A05AD /* RxRelay in Frameworks */,
 				8F2D0DF62BFE4BAC005A05AD /* Alamofire in Frameworks */,
 				8F2D0E0D2BFE63CF005A05AD /* CachedAsyncImage in Frameworks */,
+				8F2D0E102BFE68F4005A05AD /* RxCocoa in Frameworks */,
 				8F2D0E032BFE5590005A05AD /* RealmSwift in Frameworks */,
 				8F2D0DF82BFE4BAC005A05AD /* AlamofireDynamic in Frameworks */,
 			);
@@ -338,6 +342,8 @@
 				8F2D0DF72BFE4BAC005A05AD /* AlamofireDynamic */,
 				8F2D0E022BFE5590005A05AD /* RealmSwift */,
 				8F2D0E0C2BFE63CF005A05AD /* CachedAsyncImage */,
+				8F2D0E0F2BFE68F4005A05AD /* RxCocoa */,
+				8F2D0E112BFE68F4005A05AD /* RxRelay */,
 			);
 			productName = TheMealsApp;
 			productReference = 2A9D452B292C805D008FABEB /* TheMealsApp.app */;
@@ -371,6 +377,7 @@
 				8F2D0DF42BFE4BAC005A05AD /* XCRemoteSwiftPackageReference "Alamofire" */,
 				8F2D0DFF2BFE5590005A05AD /* XCRemoteSwiftPackageReference "realm-swift" */,
 				8F2D0E0B2BFE63CF005A05AD /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */,
+				8F2D0E0E2BFE68F4005A05AD /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			productRefGroup = 2A9D452C292C805D008FABEB /* Products */;
 			projectDirPath = "";
@@ -668,6 +675,14 @@
 				minimumVersion = 2.1.1;
 			};
 		};
+		8F2D0E0E2BFE68F4005A05AD /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.7.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -690,6 +705,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 8F2D0E0B2BFE63CF005A05AD /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */;
 			productName = CachedAsyncImage;
+		};
+		8F2D0E0F2BFE68F4005A05AD /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8F2D0E0E2BFE68F4005A05AD /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		8F2D0E112BFE68F4005A05AD /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8F2D0E0E2BFE68F4005A05AD /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
