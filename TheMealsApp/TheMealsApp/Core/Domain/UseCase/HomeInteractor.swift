@@ -6,10 +6,14 @@
 //
 
 import Foundation
+import Combine
 
 protocol HomeUseCase {
-
-  func getCategories(completion: @escaping (Result<[CategoryModel], Error>) -> Void)
+  // without combine
+  // func getCategories(completion: @escaping (Result<[CategoryModel], Error>) -> Void)
+  
+  /// with combine
+  func getCategories() -> AnyPublisher<[CategoryModel], Error>
 
 }
 
@@ -21,12 +25,7 @@ class HomeInteractor: HomeUseCase {
     self.repository = repository
   }
 
-  func getCategories(
-    completion: @escaping (Result<[CategoryModel], Error>) -> Void
-  ) {
-    repository.getCategories { result in
-      completion(result)
-    }
+  func getCategories() -> AnyPublisher<[CategoryModel], Error> {
+    return repository.getCategories()
   }
-
 }
